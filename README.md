@@ -22,7 +22,7 @@ $ php app/console doctrine:schema:create --em mandantB
 $ php app/console ibrows:newsletter:mandants:enable
 ``` 
 
-### regester a user by using the web interface 
+### register three new users by using the web interface 
 
   http://yoururl.com/web/register
 
