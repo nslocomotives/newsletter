@@ -21,3 +21,23 @@ $ php app/console doctrine:schema:create --em mandantB
 # enable the mandants (insert them in the defined database - already existings will be ignored)
 $ php app/console ibrows:newsletter:mandants:enable
 ``` 
+
+### regester a user by using the web interface 
+
+  http://yoururl.com/web/register
+
+### Connect a user (e.g. FOSUser) from the default connection with a mandant
+
+``` sql
+    use newsletter;
+    UPDATE `fos_user` SET mandant = "default" WHERE username = "YourUsername";
+    UPDATE `fos_user` SET mandant = "mandantA" WHERE username = "YourUsernameA";
+    UPDATE `fos_user` SET mandant = "mandantB" WHERE username = "YourUsernameB";
+```
+
+### ToDo
+
+- Theme the site
+- set up some unit tests for travis
+- integrate https://github.com/kayue/KayueWordpressBundle into this app to integrate the subscribers interface.
+
